@@ -1,3 +1,6 @@
 # processing installation
 # https://processing.org/download
 .processing3
+
+# compile output
+output
