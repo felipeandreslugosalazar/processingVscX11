@@ -3,8 +3,11 @@
   // for the documentation about the tasks.json format
   "version": "2.0.0",
   "options": {
+    // if you are using wsl you need to set DISPLAY var
     "env": {
-      // resolv for WSL grep nameserver /etc/resolv.conf | sed 's/nameserver //'
+      // use this command to get the wsl nameserver
+      // grep nameserver /etc/resolv.conf | sed 's/nameserver //'
+      // "DISPLAY":"nameserver:no. of screen (0 for laptop)" 
       "DISPLAY": "172.20.208.1:0"
     }
   },
@@ -25,11 +28,12 @@
       "command": ".processing3/processing-java",
       "args": [
         "--force",
+        // --sketch= MANDATORY arg!
+        // just indicate the path where the example that you want to run is located 
         "--sketch=${workspaceRoot}/examples/shadow",
-        // "--sketch=${workspaceRoot}/examples/circle/",
-        // "--sketch=${workspaceRoot}/examples/test/",
         "--output=${workspaceRoot}/output",
         "--platform=linux",
+        // don't forget to put run to execute the example
         "--run"
       ]
     }
