@@ -7,13 +7,14 @@
     "env": {
       // use this command to get the wsl nameserver
       // grep nameserver /etc/resolv.conf | sed 's/nameserver //'
-      // "DISPLAY":"nameserver:no. of screen (0 for laptop)" 
-      "DISPLAY": "172.20.208.1:0"
+      // "DISPLAY":"nameserver:no. of screen (0 for laptop)"
+      "DISPLAY": "172.17.48.1:0"
     }
   },
   "tasks": [
+    // Run circle
     {
-      "label": "Run Sketch",
+      "label": "Run circle",
       "type": "shell",
       "group": {
         "kind": "build",
@@ -29,8 +30,60 @@
       "args": [
         "--force",
         // --sketch= MANDATORY arg!
-        // just indicate the path where the example that you want to run is located 
+        // just indicate the path where the example that you want to run is located
+        "--sketch=${workspaceRoot}/examples/circle",
+        "--output=${workspaceRoot}/output",
+        "--platform=linux",
+        // don't forget to put run to execute the example
+        "--run"
+      ]
+    },
+    // Run shadow
+    {
+      "label": "Run shadow",
+      "type": "shell",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "dedicated"
+      },
+      "command": ".processing3/processing-java",
+      "args": [
+        "--force",
+        // --sketch= MANDATORY arg!
+        // just indicate the path where the example that you want to run is located
         "--sketch=${workspaceRoot}/examples/shadow",
+        "--output=${workspaceRoot}/output",
+        "--platform=linux",
+        // don't forget to put run to execute the example
+        "--run"
+      ]
+    },
+    // Run test
+    {
+      "label": "Run test",
+      "type": "shell",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "dedicated"
+      },
+      "command": ".processing3/processing-java",
+      "args": [
+        "--force",
+        // --sketch= MANDATORY arg!
+        // just indicate the path where the example that you want to run is located
+        "--sketch=${workspaceRoot}/examples/test",
         "--output=${workspaceRoot}/output",
         "--platform=linux",
         // don't forget to put run to execute the example
