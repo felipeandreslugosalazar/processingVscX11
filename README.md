@@ -13,7 +13,8 @@ How difficult could be set up VSC connected to WSL2 to run processing files and 
 like it originally happened considering wsl2 doesn't have a GUI?
 Well this guide it's the asnwer to my question.
 Almost a day of research.
-Worth the try, ohhh yeah, it always does.
+
+Was it worth a try? ohhh yes, it always is.
 
 ## Getting Started
 
