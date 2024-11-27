@@ -44,8 +44,6 @@ and unzipped it on the folder root
 
 VcXsrv X Server (xlaunch)
 Version "1.20.14.0" (31 dic 2021)
-[Uploading config.xlaunch…]()<?xml version="1.0" encoding="UTF-8"?>
-<XLaunch WindowMode="MultiWindow" ClientMode="NoClient" LocalClient="False" Display="0" LocalProgram="xcalc" RemoteProgram="xterm" RemotePassword="" PrivateKey="" RemoteHost="" RemoteUser="" XDMCPHost="" XDMCPBroadcast="False" XDMCPIndirect="False" Clipboard="True" ClipboardPrimary="True" ExtraParams="" Wgl="True" DisableAC="False" XDMCPTerminate="False"/>
 
 ### Checking file tree
 
